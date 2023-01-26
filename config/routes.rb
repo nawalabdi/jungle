@@ -8,10 +8,11 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   get '/signup' => 'users#new'
-  post '/users' => 'users#create
+  post '/users' => 'users#create'
 
 
   resources :about, only: [:index]
+  
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
